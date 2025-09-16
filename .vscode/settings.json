@@ -1,0 +1,6 @@
+{
+    "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
+    "containers.containerCommand": "/usr/local/bin/docker",
+    "workbench.externalBrowser": "/home/johngr/scripts/chrome-vscode.sh",
+    "simpleBrowser.focusLockIndicator.enabled": false
+}

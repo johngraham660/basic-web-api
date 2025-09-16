@@ -1,0 +1,26 @@
+{
+	"name": "Go",
+	"dockerFile": "Dockerfile",
+
+	"mounts": [
+		"type=bind,source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh"
+	],
+	
+	"postCreateCommand": "sudo chown -R vscode:vscode /home/vscode/.ssh && sudo chmod 600 /home/vscode/.ssh/id_rsa /home/vscode/.ssh/config 2>/dev/null || true && sudo chmod 644 /home/vscode/.ssh/*.pub 2>/dev/null || true",
+
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.profiles.linux": {
+					"bash": {
+						"path": "bash",
+						"icon": "terminal-bash"
+					}
+				}
+			},
+			"extensions": [
+				"golang.go"
+			]
+		}
+	}
+}
